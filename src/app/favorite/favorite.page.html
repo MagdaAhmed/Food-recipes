@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Favorite
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="md-search"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let card of cards">
+    <img src="{{card.ImgUrl}}" />
+    <div class="close">
+      <ion-button fill="clear">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-card-header>
+      <ion-card-title>{{card.title}}</ion-card-title>
+      <div class="rate">
+        <div>
+          <!-- <ion-icon name="heart-empty"></ion-icon>
+          <ion-icon name="heart-empty"></ion-icon>
+          <ion-icon name="heart-empty"></ion-icon>
+          <ion-icon name="heart-empty"></ion-icon>
+          <ion-icon name="heart-empty"></ion-icon> -->
+          <rating [rate]="2"
+          readonly="true" 
+          size="default" 
+          (rateChange)="onRateChange($event)" class="star">
+          </rating>
+          
+        </div>
+        <div>
+          <ion-icon name="alarm"></ion-icon>9h
+          <ion-icon class="red" name="heart"></ion-icon>32
+        </div>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

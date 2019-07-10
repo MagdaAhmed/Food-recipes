@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu type="overlay">
+        <ion-header class="head-image">
+            <div class="image">
+              <ion-avatar>
+                <img src="../../assets/img/person.png">
+              </ion-avatar>
+              <div class="content">
+                <h6>Sara filipi</h6>
+                <span>USA</span>
+              </div>
+            </div>
+          </ion-header>      
+      <ion-content class="menu">
+        <ion-list #list>
+          <ion-menu-toggle autoHide='false' *ngFor="let p of appPages;let i = index">
+            <ion-item> 
+              <div class="icon_cover">
+                  <ion-button [routerLink]="[p.url]" routerDirection="root" (click)="Actived(list, i)"><ion-icon name="{{p.icon}}"></ion-icon></ion-button>
+                  <p>{{p.title}}</p>
+              </div>
+            </ion-item>
+            <!-- <ion-item>
+              <div class="icon_cover">
+                <ion-button [routerLink]="[p.url2]" routerDirection="root"><ion-icon name="{{p.icon2}}"></ion-icon></ion-button>
+                <p>{{p.title2}}</p>
+            </div>
+            </ion-item> -->
+
+          </ion-menu-toggle>
+        </ion-list>
+        <!-- <div class="list">
+          <div class="list1" *ngFor="let p of appPages">
+            <div>
+              <ion-button [routerLink]="[p.url1]" >
+                <ion-icon name="{{p.icon1}}" routerDirection="root"></ion-icon>
+              </ion-button>
+              <h6>{{p.title1}}</h6>
+            </div>
+            <div>
+              <ion-button [routerLink]="[p.url2]">
+                <ion-icon name="{{p.icon2}}" routerDirection="root"></ion-icon>
+              </ion-button>
+              <h6>{{p.title2}}</h6>
+            </div>
+          </div>
+        </div>  -->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

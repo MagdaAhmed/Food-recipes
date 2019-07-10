@@ -1,0 +1,31 @@
+<ion-content class="sign">
+  <div class="container">
+    <img src="../../assets/img/logo.png" alt="logo">
+    <form class="sign_form">
+      <ion-item lines="none">
+        <ion-icon name="mail"></ion-icon>
+        <ion-input type="Email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock"></ion-icon>
+        <ion-input type="Password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit" strong="true"  [routerLink]="['/sign-up']" routerDirection="forward" >Sign In</ion-button>
+    </form> 
+<!-- <img src="../../assets/img/OR.png" class="OR"> -->
+<div class="OR">OR</div>
+    <div class="social">
+      <ion-buttons>
+        <ion-button class="facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button class="google">
+          <ion-icon name="logo-googleplus"></ion-icon>
+        </ion-button>
+        <ion-button class="twitter">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+</ion-content>

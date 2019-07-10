@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/home-app']"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Olive Pizza Recipes
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="Like()">
+        <ion-icon name="heart" [ngClass]="{'color' : like == true}"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="share"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img #cardImage src="../../assets/img/pizza.png" />
+    <ion-card-header>
+      <ion-card-title>Olive Pizza Recipes</ion-card-title>
+      <div class="rate">
+        <div>
+          <rating [rate]="2"
+          readonly="false" 
+          size="default" 
+          (rateChange)="onRateChange($event)" class="star">
+          </rating>
+
+        </div>
+        <div>
+          <ion-icon name="alarm"></ion-icon>9h
+          <ion-icon class="red" name="heart"></ion-icon>32
+        </div>
+      </div>
+    </ion-card-header>
+  </ion-card>
+  <ion-segment scrollable>
+    <ion-segment-button *ngFor="let g of gallary" (click)="changeImage(cardImage, buttonImage)">
+      <img #buttonImage src="{{g.url}}">
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div class="items">
+    <div class="item">
+      <img src="../../assets/img/l3.png"><span>Preparation<br>15 min</span>
+    </div>
+    <div class="item">
+      <img src="../../assets/img/l2.png"><span>Cook Time<br>40 min</span>
+    </div>
+    <div class="item">
+      <img src="../../assets/img/l.png"><span>Calories<br>298 cal</span>
+    </div>
+  </div>
+  <div class="list">
+    <h2>ingrediants</h2>
+    <ion-list>
+      <ion-item>
+        <ion-label>1 head garlic</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>3 tablespoons extra-virgin olive oil, plus about 1 table spoon</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>for roasting garilc</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>1/4 teaspoon red pepper flakes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>1 tablespoon chopped parsley leaves </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="instruction">
+    <h2>instruction</h2>
+    <p>This handout will help you understand how paragraphs are formed
+      This handout will help you understand how paragraphs are formed
+      This handout will help you understand how paragraphs are formed
+    </p>
+  </div>
+  <ion-button expand="block" type="submit" strong="true" (click)="show_comment()">Comment</ion-button>
+  <ion-item class="my_comment" Lines="none" [ngClass]="{'active' : show == true}">
+      <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+  <form>
+    <ion-item *ngFor="let comment of comments">
+      <ion-avatar slot="start">
+        <img src="{{comment.ImgUrl}}">
+      </ion-avatar>
+      <ion-label>
+        <h3>{{comment.title}}</h3>
+        <div class="time-comment">{{comment.time}}</div>
+        <div class="paragraph">
+          {{comment.paragraph}}
+        </div>
+        <div class="reply" float-end>
+          <ion-button fill="clear">Reply</ion-button>
+        </div>
+      </ion-label>
+    </ion-item>
+
+  </form>
+</ion-content>

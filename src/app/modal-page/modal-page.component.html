@@ -1,0 +1,22 @@
+<ion-header translucent>
+  <ion-toolbar>
+      <!-- <ion-button expend="block" (click)="close()">Cancle</ion-button> -->
+      <ion-title>Reset Password Or Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form class="sign_form">
+    <ion-item color="transparent" lines="none">
+      <ion-icon name="person"></ion-icon>
+      <ion-input type="text" placeholder="Name"></ion-input>
+    </ion-item >
+    <ion-item color="transparent" lines="none">
+      <ion-icon name="mail"></ion-icon>
+      <ion-input type="Email" placeholder="Email" required></ion-input>
+    </ion-item>
+    <ion-buttons>   
+    <ion-button expand="block" type="submit" strong="true">Send</ion-button>
+    <ion-button expend="block" (click)="close()">Cancle</ion-button>
+    </ion-buttons>
+  </form> 
+</ion-content>

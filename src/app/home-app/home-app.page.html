@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false">
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="md-search"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let card of cards" [routerLink]="['/olive-pizza']">
+    <img src="{{card.ImgUrl}}" />
+    <ion-card-header>
+      <ion-card-title>{{card.title}}</ion-card-title>
+      <div class="rate">
+        
+
+          <rating [rate]="2"
+          readonly="true" 
+          size="default" 
+          (rateChange)="onRateChange($event)" class="star">
+          </rating>
+        
+        <div>
+          <ion-icon name="alarm"></ion-icon>9h
+          <ion-icon class="red" name="heart"></ion-icon>32
+        </div>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-button fill="clear" [routerLink]="['/add-recipe']">
+    <ion-icon name="add"></ion-icon>
+  </ion-button>
+</ion-footer>

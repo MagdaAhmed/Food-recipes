@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      profile
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="md-search"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="image">
+    <ion-avatar>
+      <img src="../../assets/img/person.png">
+    </ion-avatar>
+    <div class="content">
+      <div class="header">
+        <h6>Sara filipi</h6>
+        <span>USA</span>
+      </div>
+      <ion-button fill="clear">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <form>
+
+    <ion-list>
+      <ion-item Lines='none'>
+          <ion-icon name="call" class="back" ></ion-icon>
+          <ion-input type="number" placeholder="9123456789" value="9123456789"></ion-input>
+          <ion-button fill="clear"><ion-icon name="create" slot="end"></ion-icon></ion-button>
+      </ion-item>
+      <ion-item Lines='none'>
+          <ion-icon name="mail" class="back"></ion-icon>
+          <ion-input type="email" placeholder="s.filip888@gmail.com" value="s.filip888@gmail.com"></ion-input>
+          <ion-button fill="clear"><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>
+      <ion-item Lines='none'>
+          <ion-icon name="lock" class="back"></ion-icon>
+          <ion-input type="password" placeholder="1234567" value="12344567"></ion-input>
+          <ion-button fill="clear"><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>
+      <ion-item Lines='none'>
+          <ion-icon name="pin" class="back"></ion-icon>
+          <ion-input type="text" placeholder="Utined status" value="Utined status"></ion-input>
+          <ion-button fill="clear"><ion-icon name="create"></ion-icon></ion-button>
+      </ion-item>                  
+    </ion-list>
+    <ion-button expand="block" type="submit" strong="true">Save</ion-button>
+  </form>
+</ion-content>

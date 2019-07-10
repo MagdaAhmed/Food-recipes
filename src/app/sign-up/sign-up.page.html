@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="sign">
+  <div class="container">
+    <img src="../../assets/img/logo.png" alt="logo">
+    <form class="sign_form">
+      <ion-item>
+        <ion-icon name="mail"></ion-icon>
+        <ion-input type="Email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock"></ion-icon>
+        <ion-input type="Password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock"></ion-icon>
+        <ion-input type="Password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit" strong="true" [routerLink]="['/home-app']" routerDirection="root">Sign Up</ion-button>
+    </form>
+  </div>
+</ion-content>

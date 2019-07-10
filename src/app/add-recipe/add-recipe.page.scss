@@ -1,0 +1,121 @@
+ion-header {
+    --background       : transparent;
+    background-image   : url(../../assets/img/bg.png);
+    background-position: center center;
+    background-size    : cover;
+
+    ion-toolbar {
+        --background    : transparent;
+        --ion-color-base: transparent !important;
+        color           : white;
+    }
+}
+
+.p-0 {
+    padding-top: 0;
+}
+
+.p-b {
+    padding-bottom: 0;
+}
+
+.h {
+    height: 100%;
+}
+
+.start {
+    text-align: start;
+}
+
+.center {
+    text-align: center;
+    ion-button{
+        margin: 0;
+        width: 100%;
+    } 
+}
+
+ion-content {
+    ion-grid {
+        h6 {
+            padding: 10px;
+            margin : 0;
+        }
+
+        ion-row {
+            ion-col {
+                ion-item {
+                    width           : 100%;
+                    --border-style  : none;
+                    --background    : transparent;
+                    background-color: gainsboro;
+                    border-radius   : 5px;
+                }
+
+                ion-textarea {
+                    font-size  : 1.3rem;
+                    font-weight: bold;
+                }
+
+                div {
+                    background-color: gainsboro;
+                    border-radius   : 5px;
+                    height          : 100%;
+
+                    .center {
+                        height: 100%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+ form{
+    .item-md.item-input.input-has-focus .item-inner {
+        box-shadow: none;
+    }
+    ion-list {
+        display       : flex;
+        flex-direction: row;
+        padding       : 10px;
+        justify-content: space-between;
+        ion-item {
+            width          : 30.3%;
+            --border-style : none;
+            --background   : transparent;
+            --padding-start: 0;
+            padding-left   : 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            --highlight-color-focused: none;
+            --color-focused: none;
+            /* --ion-item-background-focused: black; */
+            /* --background: aqua;*/
+            ion-input{
+                background-color: gainsboro;
+                padding: 0;
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                --border-style : none;
+                --background   : transparent;
+            }
+            ion-icon {
+                color: var(--ion-color-primary);
+            }
+
+            ion-label {
+                max-width: 25px;
+                margin-right: 10px;
+            }
+        }
+    }
+ }
+    .send {
+        padding-left : 10px;
+        padding-right: 10px;
+        color        : white;
+    }
+}

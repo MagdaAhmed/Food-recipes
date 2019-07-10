@@ -1,0 +1,129 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+ion-menu {
+    --ion-background-color: transparent;
+    --background          : transparent url(../assets/img/bg.png) center/cover no-repeat fixed;
+    --width               : 100%;
+    --height              : 90%;
+
+    .head-image {
+        --border    : none;
+        --background: transparent;
+        padding-top : 60px;
+
+        .image {
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            align-items    : center;
+            height         : 100%;
+
+            ion-avatar {
+                margin       : auto;
+                margin-bottom: 0;
+            }
+
+            .content {
+                text-align   : center;
+                color        : white;
+                margin-bottom: 20px;
+
+                h6 {
+                    margin-bottom: 0;
+                    width        : 80px;
+                    text-overflow: ellipsis;
+                    white-space  : nowrap;
+                    overflow     : hidden;
+                }
+            }
+        }
+
+        .image::after {
+            width           : 90%;
+            height          : 1px;
+            content         : "";
+            background-color: gainsboro;
+            // margin-top   :60px;
+        }
+    }
+
+    .header-md:after {
+        height  : 0;
+        position: initial;
+    }
+
+    .menu {
+        --background: transparent;
+
+        ion-list {
+            --background  : transparent;
+            display       : flex;
+            flex-wrap     : wrap;
+            padding-top   : 16px;
+            padding-bottom: 16px;
+
+            ion-menu-toggle {
+                display            : flex;
+                flex-direction     : row;
+                justify-content    : center;
+                --background       : transparent !important;
+                padding-bottom     : 10px;
+                width              : 50%;
+                margin-inline-end  : -60px;
+                margin-inline-start: 18px;
+            }
+
+            ion-item {
+                padding                     : 0;
+                --padding-start             : 0px;
+                --padding-end               : 0px;
+                --border-style              : none;
+                --inner-padding-end         : 0;
+                --inner-border-width        : 0px;
+                --border-color              : transparent;
+                --highlight-color-focused   : transparent;
+                --border-width              : 0;
+                --border-style              : none;
+                --background                : transparent;
+                --ion-item-background       : transparent;
+                // width                    : 33.3%;
+
+                .icon_cover {
+                    text-align: center;
+                    width     : 100%;
+
+                    ion-button {
+                        width          : 60px;
+                        --border-radius: 30px;
+                        --color        : white;
+                    }
+
+                    p {
+                        margin     : 0;
+                        display    : block;
+                        font-size  : 1.2rem;
+                        color      : white;
+                        font-weight: bold;
+                        width      : 70px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .active-btn {
+        ion-button {
+            --background: white;
+            --color     : var(--ion-color-primary);
+
+            ion-icon {
+                color: var(--ion-color-primary);
+            }
+        }
+    }
+}
